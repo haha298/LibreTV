@@ -5,10 +5,9 @@ const SEARCH_HISTORY_KEY = 'videoSearchHistory';
 const MAX_HISTORY_ITEMS = 5;
 
 // 密码保护配置
-// 注意：PASSWORD 环境变量是必需的，所有部署都必须设置密码以确保安全
 const PASSWORD_CONFIG = {
     localStorageKey: 'passwordVerified',  // 存储验证状态的键名
-    verificationTTL: 90 * 24 * 60 * 60 * 1000  // 验证有效期（90天，约3个月）
+    verificationTTL: 90 * 24 * 60 * 60 * 1000,  // 验证有效期（90天，约3个月）
 };
 
 // 网站信息配置
@@ -123,47 +122,47 @@ const API_SITES = {
     // 这些影片和背后的产业已经使数百万男女“下海”，出卖自己的身体，甚至以此为生计。
     // 而作为观众无辜吗？毫无疑问，他们促成了黄色产业链的再生产。
     // 我们提供此警告，是希望您能认清这些内容的本质——它们是压迫和奴役的工具，而非娱乐。
-    ckzy: {
-         api: 'https://www.ckzy1.com',
-         name: 'CK资源',
-         adult: true
-     },
-     jkun: {
-         api: 'https://jkunzyapi.com',
-         name: 'jkun资源',
-         adult: true
-     },
-     bwzy: {
-         api: 'https://api.bwzym3u8.com',
-         name: '百万资源',
-         adult: true
-     },
-     souav: {
-         api: 'https://api.souavzy.vip',
-         name: 'souav资源',
-         adult: true
-     },
-     r155: {
-         api: 'https://155api.com',
-         name: '155资源',
-         adult: true
-     },
-     lsb: {
-         api: 'https://apilsbzy1.com',
-         name: 'lsb资源',
-         adult: true
-     },
-     huangcang: {
-         api: 'https://hsckzy.vip',
-         name: '黄色仓库',
-         adult: true,
-         detail: 'https://hsckzy.vip'
-     },
-     yutu: {
-         api: 'https://yutuzy10.com',
-         name: '玉兔资源',
-         adult: true
-     },
+    // ckzy: {
+    //     api: 'https://www.ckzy1.com',
+    //     name: 'CK资源',
+    //     adult: true
+    // },
+    // jkun: {
+    //     api: 'https://jkunzyapi.com',
+    //     name: 'jkun资源',
+    //     adult: true
+    // },
+    // bwzy: {
+    //     api: 'https://api.bwzym3u8.com',
+    //     name: '百万资源',
+    //     adult: true
+    // },
+    // souav: {
+    //     api: 'https://api.souavzy.vip',
+    //     name: 'souav资源',
+    //     adult: true
+    // },
+    // r155: {
+    //     api: 'https://155api.com',
+    //     name: '155资源',
+    //     adult: true
+    // },
+    // lsb: {
+    //     api: 'https://apilsbzy1.com',
+    //     name: 'lsb资源',
+    //     adult: true
+    // },
+    // huangcang: {
+    //     api: 'https://hsckzy.vip',
+    //     name: '黄色仓库',
+    //     adult: true,
+    //     detail: 'https://hsckzy.vip'
+    // },
+    // yutu: {
+    //     api: 'https://yutuzy10.com',
+    //     name: '玉兔资源',
+    //     adult: true
+    // },
 
     // 下面是资源失效率高的API源，不建议使用
     // subo: {
@@ -179,18 +178,6 @@ const API_SITES = {
     //     name: 'U酷资源'
     // },
 };
-    //ARCHIVE https://telegra.ph/APIs-08-12
-};
-
-// 定义合并方法
-function extendAPISites(newSites) {
-    Object.assign(API_SITES, newSites);
-}
-
-// 暴露到全局
-window.API_SITES = API_SITES;
-window.extendAPISites = extendAPISites;
-
 
 // 添加聚合搜索的配置选项
 const AGGREGATED_SEARCH_CONFIG = {
